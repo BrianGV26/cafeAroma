@@ -1,0 +1,230 @@
+/* ---------- Configuración general ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5ebdc;
+  color: #3a2c1f;
+  overflow-x: hidden;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #fff8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+header .logo img {
+  width: 30px;
+  height: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #3a2c1f;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #d8b48a;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0), #f5ebdc), 
+              url("imagenes/cafe_inicio.png") center/cover no-repeat;
+  background: linear-gradient();
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero
+
+#cafe_inicio{
+  width: auto;
+  height: auto;
+}
+
+/* ---------- Bienvenida ---------- */
+.bienvenida {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.bienvenida h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.bienvenida button {
+  background-color: #b07a56;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.bienvenida button:hover {
+  background-color: #8d5e3a;
+  transform: scale(1.05);
+}
+
+/* ---------- Carrusel ---------- */
+.platos {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff8f0;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.opciones {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.opcion {
+  background-color: #f3e5d3;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.opcion:hover {
+  transform: translateY(-5px);
+}
+
+.opcion img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #8d5e3a;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #5b3a22;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff8f0;
+  padding: 30px 10px;
+  border-top: 1px solid #ddd;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #3a2c1f;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #8d5e3a;
+}
+
+.redes img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .opciones {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

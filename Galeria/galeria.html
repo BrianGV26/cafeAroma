@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma - Galería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Logo Café Aroma">
+            <h1>Café Aroma</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="../Menu/menu.html">Menú</a></li>
+                <li><a href="../Nosotros/nosotros.html">Nosotros</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="../Reservas/reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="galeria">
+        <h2>GALERÍA</h2>
+        <h3>Bienvenido a Café Aroma</h3>
+
+        <div class="contenedor-galeria">
+
+            <span class="flecha flecha-izquierda" id="flecha-izq">&#9664;</span>
+
+            <div class="slider-galeria">
+                <div class="imagenes">
+
+                    <!-- GRUPO 1 -->
+                    <div class="cuadro"><img src="../imagenes/foto_1.jpg" alt="Café Aroma 1"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_2.jpg" alt="Café Aroma 2"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_3.avif" alt="Café Aroma 3"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_4.webp" alt="Café Aroma 4"></div>
+
+                    <!-- GRUPO 2 -->
+                    <div class="cuadro"><img src="../imagenes/foto_5.avif" alt="Café Aroma 5"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_6.webp" alt="Café Aroma 6"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_7.jpg" alt="Café Aroma 7"></div>
+                    <div class="cuadro"><img src="../imagenes/foto_8.png" alt="Café Aroma 8"></div>
+                </div>
+            </div>
+
+            <span class="flecha flecha-derecha" id="flecha-der">&#9654;</span>
+
+        </div>
+            <div class="descripcion-galeria">
+                <p>Descubre la esencia de Café Aroma en cada rincón</p>
+                <p class="subtexto">Un espacio diseñado para disfrutar los mejores momentos</p>
+            </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="columna">
+            <h4>Café Aroma</h4>
+            <p>Historia</p>
+            <p>Misión</p>
+            <p>Visión</p>
+        </div>
+        <div class="columna">
+            <h4>Contáctanos</h4>
+            <p>Escríbenos</p>
+        </div>
+        <div class="columna">
+            <h4>Redes Sociales</h4>
+            <div class="redes">
+                <a href="#"><img src="../imagenes/logo_fb.png" alt="Facebook"></a>
+                <a href="#"><img src="../imagenes/Instagram_icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const contenedor = document.querySelector(".imagenes");
+        const btnDer = document.getElementById("flecha-der");
+        const btnIzq = document.getElementById("flecha-izq");
+
+        let posicion = 0;
+        const anchoCuadro = 180;
+        const gap = 20;
+        const desplazamiento = (anchoCuadro + gap) * 4;
+
+        btnDer.addEventListener("click", () => {
+            posicion = Math.max(posicion - desplazamiento, -desplazamiento);
+            contenedor.style.transform = `translateX(${posicion}px)`;
+        });
+
+        btnIzq.addEventListener("click", () => {
+            posicion = Math.min(posicion + desplazamiento, 0);
+            contenedor.style.transform = `translateX(${posicion}px)`;
+        });
+    </script>
+</body>
+</html> 
